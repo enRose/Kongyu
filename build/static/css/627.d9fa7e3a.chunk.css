@@ -1,0 +1,2 @@
+[data-avatar]:before{background-color:var(--random-colour-var);border-radius:50%;color:inherit;content:attr(data-avatar);cursor:pointer;display:inline-block;font-weight:700;height:50px;line-height:50px;margin-right:.5em;opacity:1;text-align:center;vertical-align:middle;width:50px}[data-avatar]{height:50px;margin-left:auto;margin-right:auto;width:70px}
+/*# sourceMappingURL=627.d9fa7e3a.chunk.css.map*/

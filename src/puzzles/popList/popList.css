@@ -1,0 +1,23 @@
+[data-avatar]:before {
+  background-color: var(--random-colour-var);  
+  color: inherit;
+  opacity: 1; 
+  content: attr(data-avatar); 
+  display: inline-block; 
+  font-weight: bold; 
+  border-radius: 50%; 
+  vertical-align: middle; 
+  margin-right: 0.5em; 
+  width: 50px; 
+  height: 50px; 
+  line-height: 50px; 
+  text-align: center;
+  cursor: pointer;
+}
+
+[data-avatar] {
+  width: 70px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto
+}
