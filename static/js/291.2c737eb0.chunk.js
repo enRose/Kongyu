@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjs_explore=self.webpackChunkjs_explore||[]).push([[291],{291:function(r,a,e){e.r(a);e(541);var n=e(184);a.default=function(){var r=Array(6).fill(0).map((function(r,a){var e=Math.floor(16777215*Math.random()).toString(16);return(0,n.jsx)("div",{"data-avatar":"p".concat(a),style:{"--random-colour-var":"#".concat(e)},children:a})}));return(0,n.jsxs)("div",{children:[(0,n.jsx)("p",{children:"Mouse over to pop the bubbles"}),r]})}},541:function(){}}]);
-//# sourceMappingURL=291.2c737eb0.chunk.js.map
