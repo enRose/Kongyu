@@ -1,6 +1,10 @@
 import React, { lazy, useState } from 'react'
 
 export const puzzles = {
+  'infinite-scroll': {
+    name: 'infinite-scroll',
+    puzzle: lazy(() => import('../puzzles/infiniteScroll'))
+  },
   'fading': {
     name: 'fading',
     puzzle: lazy(() => import('../puzzles/fading')),
