@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/887.ad36cdb1.chunk.js","mappings":"sKAWA,EATe,WAEb,OACE,0BACE,cAAGA,UAAU,OAAb","sources":["puzzles/fading/index.js"],"sourcesContent":["import './fade.css'\n\nconst Fading = () => {\n\n  return (\n    <div>\n      <p className=\"item\">Fade away</p>\n    </div>\n  )\n}\n\nexport default Fading"],"names":["className"],"sourceRoot":""}

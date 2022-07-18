@@ -2,6 +2,42 @@ import React, { useState, Suspense } from 'react'
 import { usePuzzle, puzzles } from './hook/usePuzzle'
 import { InfinityRender } from './interview/infinityRender'
 import './App.css'
+import { Avatar, Card, Col, Row } from 'antd'
+import 'antd/dist/antd.css'
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
+const { Meta } = Card
+
+
+const style = {
+  background: '#0092ff',
+  padding: '8px 0',
+}
+
+const Cardz = ({ imgSrc, title, description }) => (
+  <Card
+    style={{
+      width: 300,
+    }}
+    cover={
+      <img
+        alt="example"
+        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+      />
+    }
+    actions={[
+      <SettingOutlined key="setting" />,
+      <EditOutlined key="edit" />,
+      <EllipsisOutlined key="ellipsis" />,
+    ]}
+  >
+    <Meta
+      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+      title={title}
+      description={description}
+    />
+  </Card>
+)
+
 
 const App = () => {
   const [interviewMode, setInterviewMode] = useState(false)
@@ -31,13 +67,22 @@ const App = () => {
             <button key='hint-button' onClick={() => setHint(!hint)}>{hint ? 'Reset' : 'Show hint'}</button>
             {hint ? <Hint /> : <Puzzle />}
           </Suspense> :
-          Object.keys(puzzles).map(key =>
-            <div key={`div-${key}`}>
-              <button id={key} key={key}
-                onClick={e => goTo(e.currentTarget.id)}>{puzzles[key].name}
-              </button>
-            </div>
-          )
+
+          <Row
+            gutter={{
+              xs: 8,
+              sm: 16,
+              md: 24,
+              lg: 32,
+            }}
+          >
+            {Object.keys(puzzles).map(key =>
+              <Col className="gutter-row">
+                <div style={style}>{Cardz('', puzzles[key].name, puzzles[key].name)}</div>
+              </Col>
+            )}
+
+          </Row>
         }
       </div>
   )
